@@ -24,4 +24,20 @@ class Questions extends Specification {
         then:
         curl.in.text == "OUI"
     }
+
+    void "answer fourth question"() {
+        when:
+        def curl = "curl http://localhost:8080/?q=Es+tu+pret+a+recevoir+une+enonce+au+format+markdown+par+http+post(OUI/NON)".execute()
+
+        then:
+        curl.in.text == "OUI"
+    }
+
+    void "answer fith question"() {
+        when:
+        def curl = "curl http://localhost:8080/?q=Est+ce+que+tu+reponds+toujours+oui(OUI/NON)".execute()
+
+        then:
+        curl.in.text == "NON"
+    }
 }
