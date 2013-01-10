@@ -1,1 +1,1 @@
-get "/", forward: "/WEB-INF/pages/index.gtpl"
+get "/", forward: "question.groovy"
