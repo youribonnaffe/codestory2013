@@ -1,2 +1,6 @@
 get "/", forward: "/question.groovy"
-post "/enonce/1", forward: "/enonce1.groovy"
+
+get "/**/*", forward: "/debug.groovy"
+post "/**/*", forward: "/debug.groovy"
+put "/**/", forward: "/debug.groovy"
+delete "/**/*", forward: "/debug.groovy"
