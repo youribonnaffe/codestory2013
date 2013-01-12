@@ -11,7 +11,7 @@ if (!requests.contains(requestAsString)){
     requests << requestAsString
     memcache['requests'] = requests
 
-    mail.sendToAdmins from: "app@gmail.com" ,
+    mail.sendToAdmins from: "youribm@gmail.com" ,
         subject: "CodeStory: New Request",
         textBody: requestAsString
 }
